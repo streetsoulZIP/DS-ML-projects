@@ -2,29 +2,919 @@
   "schema_version": "1.0",
   "language": "ru",
   "entries": [
-    {"id":"semantic-retrieval-films","title":"Мультиязычный поиск фильмов","activity_type":"project","summary":"BGE-M3 retriever на 10 языках: layer analysis, pruning, distillation, fine-tuning и int8 CPU inference.","skills":["NLP","semantic retrieval","Sentence Transformers","fine-tuning","distillation","quantization"],"methods":["NLLB translation","triplet loss","cosine similarity"],"domains":["movies","multilingual search"],"code":["projects/multilingual-movie-retrieval"],"results":[{"value":"Triplet loss 0.23","evaluation":"test","status":"user_confirmed_readme"},{"value":"Размер модели уменьшен примерно на 63%","evaluation":"project result","status":"user_confirmed_readme"}],"status":"completed"},
-    {"id":"llm-film-data-generation","title":"Генерация данных о фильмах","activity_type":"project","summary":"LLM-генерация структурированных описаний, поисковых запросов и опечаток для retriever.","skills":["LLM","prompt engineering","Transformers","synthetic data"],"methods":["Mistral","Qwen","noise injection"],"domains":["movies","information retrieval"],"code":["projects/synthetic-movie-query-generation"],"results":[{"value":"70k запросов и 6k описаний","evaluation":"generated data volume","status":"user_confirmed_readme"}],"status":"completed"},
-    {"id":"student-employment-tabular","title":"Прогноз трудоустройства студентов","activity_type":"project","summary":"Бинарная классификация трудоустройства студентов и поиск устойчивых стратегий трудоустройства.","skills":["tabular ML","scikit-learn","cuML","Optuna","clustering"],"methods":["adaptive log transform","feature scaling","feature selection","logistic regression","tree ensemble"],"domains":["education","employment"],"code":["projects/student-employment-prediction"],"results":[{"value":"ROC-AUC 0.92; F1 0.88","evaluation":"project evaluation, Engineering Placements (~3k records)","status":"user_confirmed_update"},{"value":"5 устойчивых стратегий; silhouette 0.41; ARI 0.85","evaluation":"clustering stability analysis","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"russian-news-classification","title":"Классификация русскоязычных новостей","activity_type":"project","summary":"Тематическая классификация новостей.","skills":["NLP","TF-IDF","Logistic Regression","XGBoost","Optuna"],"domains":["news"],"code":["projects/russian-news-classification"],"results":[{"value":"F1 0.91","evaluation":"project test","status":"user_confirmed_readme"}],"status":"completed"},
-    {"id":"demand-forecasting","title":"Прогноз спроса","activity_type":"project","summary":"Прогноз спроса по временным рядам.","skills":["time series","CatBoost","Optuna"],"domains":["retail"],"code":["projects/retail-demand-forecasting"],"results":[{"value":"RMSE 0.0233; MSE 0.0117; R² 0.9995","evaluation":"project test","status":"user_confirmed_readme"}],"status":"completed"},
-    {"id":"sports-image-classification","title":"Классификация спортивных изображений","activity_type":"project","summary":"Определение вида спорта по изображению.","skills":["Computer Vision","Torchvision","DenseNet"],"domains":["sports"],"code":["projects/sports-image-classification"],"results":[{"value":"F1-score 0.8623","evaluation":"project test","status":"user_confirmed_readme"}],"status":"completed"},
-    {"id":"underwater-semantic-segmentation","title":"Сегментация подводных изображений SUIM","activity_type":"project","summary":"8-классовая сегментация SUIM: class-aware crops, аугментации и DeepLabV3+/U-Net.","skills":["Computer Vision","semantic segmentation","DeepLabV3+","U-Net","Albumentations"],"methods":["EfficientNet-B3/B6","Focal+Dice+IoU loss"],"domains":["underwater imagery"],"code":["projects/underwater-segmentation"],"results":[{"value":"mIoU 0.833; Dice 0.8702; PA 0.8663; mPA 0.8401","evaluation":"local validation, DeepLabV3+ EfficientNet-B6","status":"archive_confirmed"}],"status":"completed"},
-    {"id":"building-energy-regression","title":"Энергоэффективность зданий","activity_type":"project","summary":"Регрессия энергоэффективности строений.","skills":["tabular ML","LightGBM","Optuna"],"domains":["energy","buildings"],"code":["projects/building-energy-efficiency-regression"],"results":[{"value":"MAE 0.25; R² 0.9984","evaluation":"project test","status":"user_confirmed_readme"}],"status":"completed"},
-    {"id":"dns-review-sentiment","title":"Анализ тональности отзывов DNS","activity_type":"project","summary":"Классификация тональности русскоязычных отзывов DNS с CNN.","skills":["NLP","sentiment analysis","CNN","Conv1D"],"methods":["Conv1D×3","BatchNorm"],"domains":["e-commerce"],"code":["projects/dns-review-sentiment-analysis/dns-review-sentiment-analysis.ipynb"],"results":[{"value":"Accuracy 0.95; F1 0.95; ROC-AUC 0.97","evaluation":"project evaluation","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"fake-news-detection","title":"Детекция фейковых новостей","activity_type":"project","summary":"Классификация фейковых новостей WELFake с LSTM.","skills":["NLP","text classification","LSTM"],"methods":["Embedding 20k","LSTM 150","GlobalMaxPool"],"domains":["news"],"code":["projects/fake-news-detection/fake-news-detection.ipynb"],"results":[{"value":"Accuracy 0.94 vs 0.90 у TF-IDF + Logistic Regression baseline","evaluation":"project evaluation","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"roberta-ner","title":"NER с RoBERTa","activity_type":"project","summary":"Извлечение именованных сущностей из резюме с RoBERTa-base.","skills":["NLP","NER","RoBERTa","token classification"],"domains":["text","recruiting"],"code":["projects/roberta-ner/roberta-ner.ipynb"],"results":[{"value":"Entity-level F1 0.76","evaluation":"seqeval","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"speech-sentiment","title":"Классификация тональности речи","activity_type":"project","summary":"Классификация шести эмоций в аудио CREMA-D по MFCC и LSTM.","skills":["speech","NLP","sentiment analysis","LSTM","MFCC"],"methods":["40 MFCC","LSTM 256"],"domains":["audio","emotion recognition"],"code":["projects/speech-sentiment-classification/speech-sentiment-classification.ipynb"],"results":[{"value":"Accuracy 0.66 vs random baseline 0.167","evaluation":"6-class CREMA-D evaluation","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"spotify-topic-recommender","title":"Тематическое моделирование и рекомендации Spotify","activity_type":"project","summary":"Тематическое моделирование текстов песен и content-based рекомендации по topic vectors.","skills":["recommender systems","topic modeling","NLP","TF-IDF","NMF"],"methods":["langdetect","googletrans","TF-IDF 12k","NMF 20 topics"],"domains":["music"],"code":["projects/spotify-topic-recommendation/spotify-topic-modeling-and-recommendations.ipynb"],"results":[{"value":"Recall@20 0.31 vs random baseline 0.05; intra-list diversity 0.38","evaluation":"held-out evaluation","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"chess-move-probabilities","title":"Вероятности шахматных ходов","activity_type":"project","summary":"Бинарный скоринг легальных шахматных ходов для FEN-позиции.","skills":["Deep Learning","PyTorch","Chess","XGBoost","Optuna","ConvNeXt","Transformer"],"methods":["AlphaZero board encoding (12×8×8)","ConvNeXt + Transformer","GPU chunked training"],"domains":["games"],"code":["projects/chess-move-probability-estimation/chess-move-probability-estimation.ipynb","projects/chess-move-probability-estimation/Hybrid.pt"],"results":[{"value":"ROC-AUC 0.89","evaluation":"held-out (FEN, move) pairs","status":"user_confirmed_update"},{"value":"CPU inference without a chess engine","evaluation":"implementation capability","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"data-fest-2026-track-2","title":"Data Fest 2026 — track 2","activity_type":"competition","summary":"Memory-efficient multi-target classification: 41 бинарная цель, ~750k объектов и >2k признаков.","skills":["tabular ML","Polars","PyArrow","CatBoost","LightGBM","XGBoost","MLP","stacking"],"methods":["per-target training","feature selection","cross-fitting"],"domains":["banking","competition"],"evidence":["https://github.com/streetsoulZIP/Hackatons-and-ML-competions"],"role":"participant","personal_contribution":"Разработка memory-efficient обработки, сравнение моделей, feature selection и stacking.","official_result":null,"results":[{"value":"Macro ROC-AUC ~0.83","evaluation":"local validation","status":"archive_confirmed"}],"status":"participation_evidence_only"},
-    {"id":"kaggle-biohub-cell-tracking","title":"Kaggle Biohub: Cell Tracking During Development","activity_type":"competition","summary":"3D cell tracking и реконструкция lineage graph по микроскопическим последовательностям.","skills":["3D Computer Vision","PyTorch","graph optimization","ILP","Kaggle"],"methods":["3D U-Net","TemporalUNet3D","candidate graph","lineage constraints"],"domains":["biomedical imaging","cell tracking"],"evidence":[],"role":"team member","personal_contribution":"Интеграция detection/tracking-компонентов, настройка inference и graph heuristics, проверка lineage и сборка submission pipeline.","official_result":"Kaggle Silver Medal","results":[{"value":"Серебряная медаль Kaggle","evaluation":"official competition result","status":"archive_confirmed"}],"status":"external_code_not_copied"},
-    {"id":"ozon-ecup-product-matching","title":"Ozon E-CUP: поиск дубликатов карточек","activity_type":"competition","summary":"Мультимодальный pairwise matching товарных карточек по тексту, атрибутам и изображениям.","skills":["NLP","Computer Vision","cross-attention","PaddleOCR","ONNX","TensorRT"],"methods":["typed attributes","RuBERT","SigLIP2","weighted BCE","hard negatives"],"domains":["e-commerce","product matching"],"evidence":["https://github.com/NIKITA420240/Twin2Attr"],"role":"team member","personal_contribution":"Feature engineering атрибутов, текстовые и визуальные признаки, эксперименты с matching pipeline.","official_result":null,"results":[{"value":"macro PR-AUC 0.769580845","evaluation":"local Human validation, ~73,131 rows","status":"archive_confirmed"}],"status":"external_code_not_copied"},
-    {"id":"ozon-ecup-ltv-forecasting","title":"Ozon E-CUP: прогноз LTV/GMV","activity_type":"competition","summary":"Memory-efficient прогноз денежной активности клиентов по истории событий.","skills":["time series","LightGBM","Polars","PyArrow","Parquet","memmap"],"methods":["rolling features","decay aggregates","feature importance"],"domains":["e-commerce","customer analytics"],"evidence":[],"role":"participant","personal_contribution":"Подготовка Parquet/memmap pipeline, временные признаки, LightGBM и анализ importance.","official_result":null,"results":[{"value":"~1.67 RMSE в log1p(GMV)","evaluation":"competition metric; лучший результат указан в архиве как ~1.64","status":"archive_confirmed"}],"status":"external_code_not_copied"},
-    {"id":"kosmohackathon-fires","title":"КосмоХакатон: мониторинг природных пожаров","activity_type":"hackathon","summary":"Спутниковая детекция активного горения и сегментация контура/степени повреждения.","skills":["geospatial ML","semantic segmentation","LightGBM","Docker","REST API"],"methods":["VIIRS","Sentinel-1/2","Siamese U-Net","hard-crop mining","spatial validation"],"domains":["remote sensing","wildfire"],"evidence":[],"role":"team member","personal_contribution":"Спутниковые данные и EDA, baselines, U-Net/LightGBM, ensemble, spatial validation и inference integration.","official_result":null,"results":[{"value":"private Score 0.8307","evaluation":"private leaderboard, team result","status":"archive_confirmed"},{"value":"OOF F1 0.9272 for median-excess AF","evaluation":"local OOF","status":"archive_confirmed"}],"status":"external_code_not_copied"},
-    {"id":"kosmohackathon-ndvi-reconstruction","title":"КосмоХакатон: восстановление NDVI","activity_type":"hackathon","summary":"Sensor-aware восстановление пропусков NDVI в Sentinel-2, Landsat и MODIS временных рядах.","skills":["geospatial ML","time series","LightGBM","feature engineering"],"methods":["sensor-aware models","spatial holdout","neighbor features"],"domains":["remote sensing","agriculture"],"evidence":[],"role":"team member","personal_contribution":"Исследование sensor bias, признаки времени/соседей, LightGBM и валидация на новых территориях.","official_result":null,"results":[{"value":"RMSE 0.0536 vs 0.1024 baseline (−47.6%)","evaluation":"current hidden test, 20 objects / 2323 targets","status":"archive_confirmed"}],"status":"external_code_not_copied"},
-    {"id":"kosmohackathon-hydrowatch","title":"КосмоХакатон: HydroWatch","activity_type":"hackathon","summary":"Change detection и сегментация наводнений по парам спутниковых сцен.","skills":["geospatial ML","semantic segmentation","Siamese networks","boosting"],"methods":["Siamese ResNet18","event-level validation","SAR/optical features"],"domains":["remote sensing","flood monitoring"],"evidence":[],"role":"team member","personal_contribution":"Эксперименты Siamese ResNet18 и boosting, event-level validation, гидрологические ограничения.","official_result":null,"results":[{"value":"public Score 0.8943","evaluation":"public leaderboard; scene-specific tuned boosting","status":"archive_confirmed"},{"value":"Score 0.4646","evaluation":"independent transferability check of that boosting approach","status":"archive_confirmed"}],"status":"external_code_not_copied"},
-    {"id":"ai-finance-rag-assistant","title":"AI Finance Challenge: RAG-ассистент","activity_type":"competition","summary":"RAG для финансовых и правовых вопросов с retrieval, reranking, answer grading и regeneration.","skills":["RAG","FAISS","LangChain","LLM","reranking"],"methods":["text-embedding-3-small","Qwen3-Reranker-4B","Mistral Small","Gemma 3"],"domains":["finance","legal QA"],"evidence":[],"role":"individual participant","personal_contribution":"Полный retrieval-to-generation pipeline.","official_result":"finalist","results":[{"value":"Выход в финал","evaluation":"competition achievement","status":"archive_confirmed"}],"status":"external_code_not_copied"},
-    {"id":"llm-product-attribute-labeling","title":"LLM-разметка товарных пар","activity_type":"project","summary":"Extractor–Critic–Judge система для структурированной разметки атрибутов и совпадения товаров.","skills":["LLM","llama.cpp","GGUF","structured outputs"],"methods":["Gemma 3","Qwen 2.5","JSON schema","retry and repair"],"domains":["e-commerce","data labeling"],"evidence":["https://github.com/NIKITA420240/Twin2Attr"],"results":[{"value":"Attribute-level agreement 85.2%; Judge self-consistency 92.4%; Critic veto precision 89.7%; JSON schema valid rate 98.1%","evaluation":"500 manually labeled control pairs; valid rate after repair/retry","status":"user_confirmed_update"}],"status":"completed"},
-    {"id":"neftehack-process-forecasting","title":"Neftehack: технологические временные ряды","activity_type":"hackathon","summary":"Прогноз динамики качества нефтепереработки и контур оценки управляющих действий.","skills":["data engineering","time series","CatBoost","LightGBM","Parquet"],"methods":["as-of join","lookahead control","recursive forecasting","feature selection"],"domains":["oil refining","industrial ML"],"evidence":[],"role":"team member","personal_contribution":"Объединение телеметрии и лабораторных измерений, прогнозирование динамики качества и подготовка контура оценки действий.","official_result":null,"results":[{"value":"Normalized RMSE 0.061; MAPE 7.1%; R² 0.902","evaluation":"held-out final test period without lookahead","status":"user_confirmed_update"}],"status":"external_code_not_copied"}
+    {
+      "id": "semantic-retrieval-films",
+      "title": "Мультиязычный поиск фильмов",
+      "activity_type": "project",
+      "summary": "BGE-M3 retriever на 10 языках: layer analysis, pruning, distillation, fine-tuning и int8 CPU inference.",
+      "skills": [
+        "NLP",
+        "semantic retrieval",
+        "Sentence Transformers",
+        "fine-tuning",
+        "distillation",
+        "quantization"
+      ],
+      "methods": [
+        "NLLB translation",
+        "triplet loss",
+        "cosine similarity"
+      ],
+      "domains": [
+        "movies",
+        "multilingual search"
+      ],
+      "code": [
+        "projects/multilingual-movie-retrieval"
+      ],
+      "results": [
+        {
+          "value": "Triplet loss 0.23",
+          "evaluation": "test",
+          "status": "user_confirmed_readme"
+        },
+        {
+          "value": "Размер модели уменьшен примерно на 63%",
+          "evaluation": "project result",
+          "status": "user_confirmed_readme"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "llm-film-data-generation",
+      "title": "Генерация данных о фильмах",
+      "activity_type": "project",
+      "summary": "LLM-генерация структурированных описаний, поисковых запросов и опечаток для retriever.",
+      "skills": [
+        "LLM",
+        "prompt engineering",
+        "Transformers",
+        "synthetic data"
+      ],
+      "methods": [
+        "Mistral",
+        "Qwen",
+        "noise injection"
+      ],
+      "domains": [
+        "movies",
+        "information retrieval"
+      ],
+      "code": [
+        "projects/synthetic-movie-query-generation"
+      ],
+      "results": [
+        {
+          "value": "70k запросов и 6k описаний",
+          "evaluation": "generated data volume",
+          "status": "user_confirmed_readme"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "student-employment-tabular",
+      "title": "Прогноз трудоустройства студентов",
+      "activity_type": "project",
+      "summary": "Бинарная классификация трудоустройства студентов и поиск устойчивых стратегий трудоустройства.",
+      "skills": [
+        "tabular ML",
+        "scikit-learn",
+        "cuML",
+        "Optuna",
+        "clustering"
+      ],
+      "methods": [
+        "adaptive log transform",
+        "feature scaling",
+        "feature selection",
+        "logistic regression",
+        "tree ensemble"
+      ],
+      "domains": [
+        "education",
+        "employment"
+      ],
+      "code": [
+        "projects/student-employment-prediction"
+      ],
+      "results": [
+        {
+          "value": "ROC-AUC 0.92; F1 0.88",
+          "evaluation": "project evaluation, Engineering Placements (~3k records)",
+          "status": "user_confirmed_update"
+        },
+        {
+          "value": "5 устойчивых стратегий; silhouette 0.41; ARI 0.85",
+          "evaluation": "clustering stability analysis",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "russian-news-classification",
+      "title": "Классификация русскоязычных новостей",
+      "activity_type": "project",
+      "summary": "Тематическая классификация новостей.",
+      "skills": [
+        "NLP",
+        "TF-IDF",
+        "Logistic Regression",
+        "XGBoost",
+        "Optuna"
+      ],
+      "domains": [
+        "news"
+      ],
+      "code": [
+        "projects/russian-news-classification"
+      ],
+      "results": [
+        {
+          "value": "F1 0.91",
+          "evaluation": "project test",
+          "status": "user_confirmed_readme"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "demand-forecasting",
+      "title": "Прогноз спроса",
+      "activity_type": "project",
+      "summary": "Прогноз спроса по временным рядам.",
+      "skills": [
+        "time series",
+        "CatBoost",
+        "Optuna"
+      ],
+      "domains": [
+        "retail"
+      ],
+      "code": [
+        "projects/retail-demand-forecasting"
+      ],
+      "results": [
+        {
+          "value": "RMSE 0.0233; MSE 0.0117; R² 0.9995",
+          "evaluation": "project test",
+          "status": "user_confirmed_readme"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "sports-image-classification",
+      "title": "Классификация спортивных изображений",
+      "activity_type": "project",
+      "summary": "Определение вида спорта по изображению.",
+      "skills": [
+        "Computer Vision",
+        "Torchvision",
+        "DenseNet"
+      ],
+      "domains": [
+        "sports"
+      ],
+      "code": [
+        "projects/sports-image-classification"
+      ],
+      "results": [
+        {
+          "value": "F1-score 0.8623",
+          "evaluation": "project test",
+          "status": "user_confirmed_readme"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "underwater-semantic-segmentation",
+      "title": "Сегментация подводных изображений SUIM",
+      "activity_type": "project",
+      "summary": "8-классовая сегментация SUIM: class-aware crops, аугментации и DeepLabV3+/U-Net.",
+      "skills": [
+        "Computer Vision",
+        "semantic segmentation",
+        "DeepLabV3+",
+        "U-Net",
+        "Albumentations"
+      ],
+      "methods": [
+        "EfficientNet-B3/B6",
+        "Focal+Dice+IoU loss"
+      ],
+      "domains": [
+        "underwater imagery"
+      ],
+      "code": [
+        "projects/underwater-segmentation"
+      ],
+      "results": [
+        {
+          "value": "mIoU 0.833; Dice 0.8702; PA 0.8663; mPA 0.8401",
+          "evaluation": "local validation, DeepLabV3+ EfficientNet-B6",
+          "status": "archive_confirmed"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "building-energy-regression",
+      "title": "Энергоэффективность зданий",
+      "activity_type": "project",
+      "summary": "Регрессия энергоэффективности строений.",
+      "skills": [
+        "tabular ML",
+        "LightGBM",
+        "Optuna"
+      ],
+      "domains": [
+        "energy",
+        "buildings"
+      ],
+      "code": [
+        "projects/building-energy-efficiency-regression"
+      ],
+      "results": [
+        {
+          "value": "MAE 0.25; R² 0.9984",
+          "evaluation": "project test",
+          "status": "user_confirmed_readme"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "dns-review-sentiment",
+      "title": "Анализ тональности отзывов DNS",
+      "activity_type": "project",
+      "summary": "Классификация тональности русскоязычных отзывов DNS с CNN.",
+      "skills": [
+        "NLP",
+        "sentiment analysis",
+        "CNN",
+        "Conv1D"
+      ],
+      "methods": [
+        "Conv1D×3",
+        "BatchNorm"
+      ],
+      "domains": [
+        "e-commerce"
+      ],
+      "code": [
+        "projects/dns-review-sentiment-analysis/dns-review-sentiment-analysis.ipynb"
+      ],
+      "results": [
+        {
+          "value": "Accuracy 0.95; F1 0.95; ROC-AUC 0.97",
+          "evaluation": "project evaluation",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "fake-news-detection",
+      "title": "Детекция фейковых новостей",
+      "activity_type": "project",
+      "summary": "Классификация фейковых новостей WELFake с LSTM.",
+      "skills": [
+        "NLP",
+        "text classification",
+        "LSTM"
+      ],
+      "methods": [
+        "Embedding 20k",
+        "LSTM 150",
+        "GlobalMaxPool"
+      ],
+      "domains": [
+        "news"
+      ],
+      "code": [
+        "projects/fake-news-detection/fake-news-detection.ipynb"
+      ],
+      "results": [
+        {
+          "value": "Accuracy 0.94 vs 0.90 у TF-IDF + Logistic Regression baseline",
+          "evaluation": "project evaluation",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "roberta-ner",
+      "title": "NER с RoBERTa",
+      "activity_type": "project",
+      "summary": "Извлечение именованных сущностей из резюме с RoBERTa-base.",
+      "skills": [
+        "NLP",
+        "NER",
+        "RoBERTa",
+        "token classification"
+      ],
+      "domains": [
+        "text",
+        "recruiting"
+      ],
+      "code": [
+        "projects/roberta-ner/roberta-ner.ipynb"
+      ],
+      "results": [
+        {
+          "value": "Entity-level F1 0.76",
+          "evaluation": "seqeval",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "speech-sentiment",
+      "title": "Классификация тональности речи",
+      "activity_type": "project",
+      "summary": "Классификация шести эмоций в аудио CREMA-D по MFCC и LSTM.",
+      "skills": [
+        "speech",
+        "NLP",
+        "sentiment analysis",
+        "LSTM",
+        "MFCC"
+      ],
+      "methods": [
+        "40 MFCC",
+        "LSTM 256"
+      ],
+      "domains": [
+        "audio",
+        "emotion recognition"
+      ],
+      "code": [
+        "projects/speech-sentiment-classification/speech-sentiment-classification.ipynb"
+      ],
+      "results": [
+        {
+          "value": "Accuracy 0.66 vs random baseline 0.167",
+          "evaluation": "6-class CREMA-D evaluation",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "spotify-topic-recommender",
+      "title": "Тематическое моделирование и рекомендации Spotify",
+      "activity_type": "project",
+      "summary": "Тематическое моделирование текстов песен и content-based рекомендации по topic vectors.",
+      "skills": [
+        "recommender systems",
+        "topic modeling",
+        "NLP",
+        "TF-IDF",
+        "NMF"
+      ],
+      "methods": [
+        "langdetect",
+        "googletrans",
+        "TF-IDF 12k",
+        "NMF 20 topics"
+      ],
+      "domains": [
+        "music"
+      ],
+      "code": [
+        "projects/spotify-topic-recommendation/spotify-topic-modeling-and-recommendations.ipynb"
+      ],
+      "results": [
+        {
+          "value": "Recall@20 0.31 vs random baseline 0.05; intra-list diversity 0.38",
+          "evaluation": "held-out evaluation",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "chess-move-probabilities",
+      "title": "Вероятности шахматных ходов",
+      "activity_type": "project",
+      "summary": "Бинарный скоринг легальных шахматных ходов для FEN-позиции.",
+      "skills": [
+        "Deep Learning",
+        "PyTorch",
+        "Chess",
+        "XGBoost",
+        "Optuna",
+        "ConvNeXt",
+        "Transformer"
+      ],
+      "methods": [
+        "AlphaZero board encoding (12×8×8)",
+        "ConvNeXt + Transformer",
+        "GPU chunked training"
+      ],
+      "domains": [
+        "games"
+      ],
+      "code": [
+        "projects/chess-move-probability-estimation/chess-move-probability-estimation.ipynb",
+        "projects/chess-move-probability-estimation/Hybrid.pt"
+      ],
+      "results": [
+        {
+          "value": "ROC-AUC 0.89",
+          "evaluation": "held-out (FEN, move) pairs",
+          "status": "user_confirmed_update"
+        },
+        {
+          "value": "CPU inference without a chess engine",
+          "evaluation": "implementation capability",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "data-fest-2026-track-2",
+      "title": "Data Fest 2026 — track 2",
+      "activity_type": "competition",
+      "summary": "Memory-efficient multi-target classification: 41 бинарная цель, ~750k объектов и >2k признаков.",
+      "skills": [
+        "tabular ML",
+        "Polars",
+        "PyArrow",
+        "CatBoost",
+        "LightGBM",
+        "XGBoost",
+        "MLP",
+        "stacking"
+      ],
+      "methods": [
+        "per-target training",
+        "feature selection",
+        "cross-fitting"
+      ],
+      "domains": [
+        "banking",
+        "competition"
+      ],
+      "evidence": [
+        "https://github.com/streetsoulZIP/Hackatons-and-ML-competions"
+      ],
+      "role": "participant",
+      "personal_contribution": "Разработка memory-efficient обработки, сравнение моделей, feature selection и stacking.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "Macro ROC-AUC ~0.83",
+          "evaluation": "local validation",
+          "status": "archive_confirmed"
+        }
+      ],
+      "status": "participation_evidence_only"
+    },
+    {
+      "id": "kaggle-biohub-cell-tracking",
+      "title": "Kaggle Biohub: Cell Tracking During Development",
+      "activity_type": "competition",
+      "summary": "3D cell tracking и реконструкция lineage graph по микроскопическим последовательностям.",
+      "skills": [
+        "3D Computer Vision",
+        "PyTorch",
+        "graph optimization",
+        "ILP",
+        "Kaggle",
+        "Kaggle API/CLI",
+        "experiment reproducibility"
+      ],
+      "methods": [
+        "3D U-Net",
+        "TemporalUNet3D",
+        "candidate graph",
+        "lineage constraints"
+      ],
+      "domains": [
+        "biomedical imaging",
+        "cell tracking"
+      ],
+      "evidence": [
+        "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development"
+      ],
+      "role": "team member",
+      "personal_contribution": "Интеграция detection/tracking-компонентов, настройка inference и graph heuristics, проверка lineage и сборка submission pipeline. Отдельный собственный репозиторий подтверждает разработку воспроизводимого Kaggle runner, сбор результатов, диагностику Zarr/GEFF и исследование reference notebooks.",
+      "official_result": "Kaggle Silver Medal",
+      "results": [
+        {
+          "value": "Серебряная медаль Kaggle",
+          "evaluation": "official competition result",
+          "status": "archive_confirmed"
+        },
+        {
+          "value": "2 успешные CPU-проверки инфраструктуры",
+          "evaluation": "execution/retrieval and PNG/CSV/provenance smoke tests (2026-09-18); not ML or leaderboard scores",
+          "status": "repository_confirmed"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "ozon-ecup-product-matching",
+      "title": "Ozon E-CUP: поиск дубликатов карточек",
+      "activity_type": "competition",
+      "summary": "Мультимодальный pairwise matching товарных карточек по тексту, атрибутам и изображениям.",
+      "skills": [
+        "NLP",
+        "Computer Vision",
+        "cross-attention",
+        "PaddleOCR",
+        "ONNX",
+        "TensorRT"
+      ],
+      "methods": [
+        "typed attributes",
+        "RuBERT",
+        "SigLIP2",
+        "weighted BCE",
+        "hard negatives",
+        "Nemotron Llama 1B bidirectional reranker",
+        "typed attribute fusion",
+        "source-weighted hard/soft labels",
+        "offline submission packaging"
+      ],
+      "domains": [
+        "e-commerce",
+        "product matching"
+      ],
+      "evidence": [
+        "https://github.com/NIKITA420240/Twin2Attr",
+        "https://github.com/NIKITA420240/Twin2Attr/pull/2",
+        "https://github.com/NIKITA420240/Twin2Attr/pull/3"
+      ],
+      "role": "team member",
+      "personal_contribution": "Feature engineering атрибутов, текстовые и визуальные признаки, эксперименты с matching pipeline. Автор открытого PR #2 по объединению Human, synthetic hard negatives и LLM-разметки в обучающей выборке, а также PR #3 по бенчмаркам; слияние PR не подтверждено.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "macro PR-AUC 0.769580845",
+          "evaluation": "local Human validation, ~73,131 rows",
+          "status": "archive_confirmed"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "ozon-ecup-ltv-forecasting",
+      "title": "Ozon E-CUP: прогноз LTV/GMV",
+      "activity_type": "competition",
+      "summary": "Memory-efficient прогноз денежной активности клиентов по истории событий.",
+      "skills": [
+        "time series",
+        "LightGBM",
+        "Polars",
+        "PyArrow",
+        "Parquet",
+        "memmap"
+      ],
+      "methods": [
+        "rolling features",
+        "decay aggregates",
+        "feature importance"
+      ],
+      "domains": [
+        "e-commerce",
+        "customer analytics"
+      ],
+      "evidence": [],
+      "role": "participant",
+      "personal_contribution": "Подготовка Parquet/memmap pipeline, временные признаки, LightGBM и анализ importance.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "~1.67 RMSE в log1p(GMV)",
+          "evaluation": "competition metric; лучший результат указан в архиве как ~1.64",
+          "status": "archive_confirmed"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "kosmohackathon-fires",
+      "title": "КосмоХакатон: мониторинг природных пожаров",
+      "activity_type": "hackathon",
+      "summary": "Спутниковая детекция активного горения и сегментация контура/степени повреждения.",
+      "skills": [
+        "geospatial ML",
+        "semantic segmentation",
+        "LightGBM",
+        "Docker",
+        "REST API"
+      ],
+      "methods": [
+        "VIIRS",
+        "Sentinel-1/2",
+        "Siamese U-Net",
+        "hard-crop mining",
+        "spatial validation"
+      ],
+      "domains": [
+        "remote sensing",
+        "wildfire"
+      ],
+      "evidence": [],
+      "role": "team member",
+      "personal_contribution": "Спутниковые данные и EDA, baselines, U-Net/LightGBM, ensemble, spatial validation и inference integration.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "private Score 0.8107 vs 0.5486 initial baseline",
+          "evaluation": "team private leaderboard; repository README and experiment log",
+          "status": "repository_confirmed"
+        },
+        {
+          "value": "private Score 0.8307",
+          "evaluation": "ранее указанная командная private-оценка; текущий журнал экспериментов её не подтверждает",
+          "status": "archive_only_not_repository_verified"
+        },
+        {
+          "value": "OOF F1 0.9272 for median-excess AF",
+          "evaluation": "5-fold spatial OOF; repository experiment log",
+          "status": "repository_confirmed"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "kosmohackathon-ndvi-reconstruction",
+      "title": "КосмоХакатон: восстановление NDVI",
+      "activity_type": "hackathon",
+      "summary": "Sensor-aware восстановление пропусков NDVI в Sentinel-2, Landsat и MODIS временных рядах.",
+      "skills": [
+        "geospatial ML",
+        "time series",
+        "LightGBM",
+        "feature engineering"
+      ],
+      "methods": [
+        "sensor-aware models",
+        "spatial holdout",
+        "neighbor features"
+      ],
+      "domains": [
+        "remote sensing",
+        "agriculture"
+      ],
+      "evidence": [
+        "https://github.com/Niellari/KosmoHackathon",
+        "https://github.com/Niellari/KosmoHackathon/blob/main/REPORT.md",
+        "https://github.com/Niellari/KosmoHackathon/blob/main/EXPERIMENTS.md"
+      ],
+      "role": "team member",
+      "personal_contribution": "Исследование sensor bias, признаки времени/соседей, LightGBM и валидация на новых территориях.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "RMSE 0.0736 vs 0.1024 baseline (−28.1%)",
+          "evaluation": "hidden test, sensor_lightgbm v9; 20 unseen objects / 2323 targets",
+          "status": "repository_confirmed"
+        },
+        {
+          "value": "RMSE 0.0536 vs 0.1024 baseline (−47.6%)",
+          "evaluation": "ранее указанная архивная оценка; в текущих REPORT.md и EXPERIMENTS.md не подтверждена",
+          "status": "archive_only_not_repository_verified"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "kosmohackathon-hydrowatch",
+      "title": "КосмоХакатон: HydroWatch",
+      "activity_type": "hackathon",
+      "summary": "Change detection и сегментация наводнений по парам спутниковых сцен.",
+      "skills": [
+        "geospatial ML",
+        "semantic segmentation",
+        "Siamese networks",
+        "boosting"
+      ],
+      "methods": [
+        "Siamese ResNet18",
+        "event-level validation",
+        "SAR/optical features"
+      ],
+      "domains": [
+        "remote sensing",
+        "flood monitoring"
+      ],
+      "evidence": [],
+      "role": "team member",
+      "personal_contribution": "Эксперименты Siamese ResNet18 и boosting, event-level validation, гидрологические ограничения.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "public Score 0.8943",
+          "evaluation": "public leaderboard; the same reference scenes used for tuning, not independent generalization",
+          "status": "repository_confirmed"
+        },
+        {
+          "value": "Score 0.4646",
+          "evaluation": "independent generalization check without scene-specific tuning",
+          "status": "repository_confirmed"
+        },
+        {
+          "value": "Score 0.6665",
+          "evaluation": "Siamese ResNet18 encoder-decoder, event-level validation (team report)",
+          "status": "repository_confirmed"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "ai-finance-rag-assistant",
+      "title": "AI Finance Challenge: RAG-ассистент",
+      "activity_type": "competition",
+      "summary": "RAG для финансовых и правовых вопросов с retrieval, reranking, answer grading и regeneration.",
+      "skills": [
+        "RAG",
+        "FAISS",
+        "LangChain",
+        "LLM",
+        "reranking"
+      ],
+      "methods": [
+        "text-embedding-3-small",
+        "Qwen3-Reranker-4B",
+        "Mistral Small",
+        "Gemma 3"
+      ],
+      "domains": [
+        "finance",
+        "legal QA"
+      ],
+      "evidence": [],
+      "role": "individual participant",
+      "personal_contribution": "Полный retrieval-to-generation pipeline.",
+      "official_result": "finalist",
+      "results": [
+        {
+          "value": "Выход в финал",
+          "evaluation": "competition achievement",
+          "status": "archive_confirmed"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "llm-product-attribute-labeling",
+      "title": "LLM-разметка товарных пар",
+      "activity_type": "project",
+      "summary": "Extractor–Critic–Judge система для структурированной разметки атрибутов и совпадения товаров.",
+      "skills": [
+        "LLM",
+        "llama.cpp",
+        "GGUF",
+        "structured outputs"
+      ],
+      "methods": [
+        "Gemma 3",
+        "Qwen 2.5",
+        "JSON schema",
+        "retry and repair"
+      ],
+      "domains": [
+        "e-commerce",
+        "data labeling"
+      ],
+      "evidence": [
+        "https://github.com/NIKITA420240/Twin2Attr"
+      ],
+      "results": [
+        {
+          "value": "Attribute-level agreement 85.2%; Judge self-consistency 92.4%; Critic veto precision 89.7%; JSON schema valid rate 98.1%",
+          "evaluation": "500 manually labeled control pairs; valid rate after repair/retry",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "id": "neftehack-process-forecasting",
+      "title": "Neftehack: технологические временные ряды",
+      "activity_type": "hackathon",
+      "summary": "Прогноз динамики качества нефтепереработки и контур оценки управляющих действий.",
+      "skills": [
+        "data engineering",
+        "time series",
+        "CatBoost",
+        "LightGBM",
+        "Parquet"
+      ],
+      "methods": [
+        "as-of join",
+        "lookahead control",
+        "recursive forecasting",
+        "feature selection"
+      ],
+      "domains": [
+        "oil refining",
+        "industrial ML"
+      ],
+      "evidence": [],
+      "role": "team member",
+      "personal_contribution": "Объединение телеметрии и лабораторных измерений, прогнозирование динамики качества и подготовка контура оценки действий.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "Normalized RMSE 0.061; MAPE 7.1%; R² 0.902",
+          "evaluation": "held-out final test period without lookahead",
+          "status": "user_confirmed_update"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "alfa-start-semantic-intent-retrieval",
+      "title": "Альфа Старт: семантический поиск бизнес-сценариев",
+      "activity_type": "project",
+      "summary": "Прототип помощника предпринимателя: семантический поиск намерения по базе готовых сценариев и возврат заранее подготовленного ответа вместо свободной LLM-генерации.",
+      "skills": [
+        "NLP",
+        "semantic retrieval",
+        "ONNX Runtime",
+        "INT8 quantization",
+        "FastAPI",
+        "NumPy",
+        "Transformers",
+        "CPU inference"
+      ],
+      "methods": [
+        "cointegrated/rubert-tiny2",
+        "masked mean pooling",
+        "L2 normalization",
+        "cosine similarity",
+        "precomputed scenario embeddings"
+      ],
+      "domains": [
+        "fintech",
+        "intent matching",
+        "business assistant"
+      ],
+      "evidence": [],
+      "role": "developer",
+      "personal_contribution": "Реализация семантического поиска и API, расширение базы сценариев с 44 до 224 и переход на INT8 ONNX Runtime; подтверждено историей собственных коммитов от 20.07.2026.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "224 сценария (исходно 44)",
+          "evaluation": "размер базы сценариев по истории коммитов; не метрика качества",
+          "status": "repository_confirmed"
+        },
+        {
+          "value": "CPU inference with INT8 ONNX model",
+          "evaluation": "проверка реализации и наличия экспортированной модели в репозитории; задержка и качество не измерены в рамках аудита",
+          "status": "repository_confirmed"
+        }
+      ],
+      "status": "external_code_not_copied"
+    },
+    {
+      "id": "alfa-connectome-2026",
+      "title": "Alfa Connectome 2026: прогноз движения цены",
+      "activity_type": "competition",
+      "summary": "Командное решение задачи прогнозирования двух показателей будущего движения цены по последовательностям событий книги заявок и сделок; официальный приём решений закрыт.",
+      "skills": [
+        "time series",
+        "financial ML",
+        "feature engineering",
+        "model evaluation"
+      ],
+      "methods": [
+        "Global Weighted Pearson correlation"
+      ],
+      "domains": [
+        "quantitative finance",
+        "limit order book",
+        "market microstructure"
+      ],
+      "evidence": [
+        "https://wundernn.io/connectome/docs/faq",
+        "https://wundernn.io/docs/timeline"
+      ],
+      "role": "team member",
+      "personal_contribution": "Разработка и проверка признаков, сравнительная оценка вариантов моделей; вклад подтверждён историей GitHub и авторским PR. Подробности закрытого репозитория не раскрываются до подведения итогов.",
+      "official_result": null,
+      "results": [
+        {
+          "value": "Приём решений завершён 15.11.2026; объявление победителей запланировано на 01.12.2026",
+          "evaluation": "официальный календарь соревнования; не оценка модели и не место в итоговом рейтинге",
+          "status": "competition_schedule_confirmed"
+        }
+      ],
+      "status": "participation_evidence_only"
+    }
   ]
 }

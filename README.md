@@ -10,14 +10,15 @@
 | [Сегментация подводных сцен SUIM](projects/underwater-segmentation) | 8-классовая сегментация, class-aware crops, синхронные аугментации, combined loss; сравнение DeepLabV3+ и U-Net. | DeepLabV3+ + EfficientNet-B6: **mIoU 0.833**, Dice 0.8702 (локальная валидация). |
 | [Синтетические данные для movie retrieval](projects/synthetic-movie-query-generation) | Mistral формирует структурированные описания, Qwen — поисковые запросы, затем добавляются реалистичные опечатки. | Около **70k запросов** и **6k описаний**. |
 | `kaggle-biohub-cell-tracking` | Командный pipeline 3D cell tracking и восстановления lineage graph: 3D U-Net, temporal links, graph constraints и ILP. | **Серебряная медаль Kaggle**. |
-| `kosmohackathon-ndvi-reconstruction` | Восстановление пропусков NDVI в данных Sentinel-2, Landsat и MODIS. | hidden test RMSE **0.0536** против baseline 0.1024 (−47.6%). |
+| [`kosmohackathon-ndvi-reconstruction`](https://github.com/Niellari/KosmoHackathon) | Восстановление пропусков NDVI в данных Sentinel-2, Landsat и MODIS. | Подтверждённый репозиторием hidden test RMSE **0.0736** против baseline 0.1024 (−28.1%). |
+| `alfa-start-semantic-intent-retrieval` | Семантический поиск готовых бизнес-сценариев, RuBERT-tiny2, ONNX INT8 и FastAPI. | **224 сценария**; CPU-инференс без генеративной LLM. |
 
 ## Навигация
 
 - [`projects/`](projects) — 14 самостоятельных работ.
 - [`PORTFOLIO.md`](PORTFOLIO.md) — краткий обзор проектов и соревнований.
 - [`EXPERIENCE_ARCHIVE.md`](EXPERIENCE_ARCHIVE.md) — подробные карточки задач, методов, вклада и результатов.
-- [`portfolio/catalog.json`](portfolio/catalog.json) — полная структурированная сводка проектов, компетенций и результатов для автоматического отбора и ИИ-систем.
+- [`portfolio/catalog.json`](portfolio/catalog.json) — полная структурированная сводка проектов, компетенций и результатов для автоматического отбора и ИИ-систем (26 записей).
 
 ## Остальные локальные проекты
 

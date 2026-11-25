@@ -30,14 +30,21 @@ Data Scientist / ML Engineer с практикой в tabular ML, Computer Visio
 | ID | Задача и работа | Результат |
 | --- | --- | --- |
 | `kaggle-biohub-cell-tracking` | 3D-трекинг клеток и восстановление делений по микроскопическим кадрам. | **Kaggle Silver Medal** |
-| `kosmohackathon-fires` | Детекция очагов и сегментация последствий пожаров по спутниковым данным. | team private Score **0.8307** |
-| `kosmohackathon-ndvi-reconstruction` | Восстановление пропусков NDVI в данных Sentinel-2, Landsat и MODIS. | hidden test RMSE **0.0536** |
-| `kosmohackathon-hydrowatch` | Сегментация воды и новых зон затопления по паре спутниковых сцен. | public Score **0.8943**; transfer Score 0.4646 |
+| `kosmohackathon-fires` | Детекция очагов и сегментация последствий пожаров по спутниковым данным. | team private Score **0.8107**, подтверждённый журналом экспериментов |
+| `kosmohackathon-ndvi-reconstruction` | [Восстановление пропусков NDVI](https://github.com/Niellari/KosmoHackathon) в данных Sentinel-2, Landsat и MODIS. | hidden test RMSE **0.0736** против baseline 0.1024, подтверждено репозиторием |
+| `kosmohackathon-hydrowatch` | Сегментация воды и новых зон затопления по паре спутниковых сцен. | public Score **0.8943** на известных сценах; независимый boosting 0.4646; Siamese 0.6665 |
 | `ozon-ecup-product-matching` | Поиск дубликатов товарных карточек по тексту, атрибутам, изображениям и OCR. | local Human validation macro PR-AUC **0.769580845** |
 | `ozon-ecup-ltv-forecasting` | Прогноз будущего GMV клиента по истории покупок и событий. | ~1.67 RMSE в log1p(GMV) |
 | `data-fest-2026-track-2` | 41-target классификация клиентов по ~2k признакам. | local Macro ROC-AUC ~**0.83** |
 | `ai-finance-rag-assistant` | RAG-ответы на финансовые и правовые вопросы по корпусу документов. | выход в финал |
 | `llm-product-attribute-labeling` | LLM извлекает и проверяет атрибуты из описаний товарных карточек. | agreement 85.2%; JSON valid rate 98.1% |
 | `neftehack-process-forecasting` | Прогноз качества продукта по телеметрии и лабораторным измерениям. | held-out normalized RMSE 0.061; MAPE 7.1%; R² 0.902 |
+| `alfa-connectome-2026` | [Alfa Connectome](https://wundernn.io/connectome/docs/faq): прогноз двух показателей движения цены по рыночным последовательностям. | Приём решений завершён 15.11.2026; итоги ожидаются 01.12.2026 |
 
-Для каждого результата указан тип проверки: public/private leaderboard, hidden test, локальная валидация или официальный итог.
+Для каждого результата указан тип проверки: public/private leaderboard, hidden test, локальная валидация или официальный итог. Более высокие ранее записанные архивные оценки NDVI и Fires сохранены в подробном архиве, но не считаются подтверждёнными текущими репозиториями.
+
+## Прикладные проекты без локального кода
+
+| ID | Работа | Зафиксированный результат |
+| --- | --- | --- |
+| `alfa-start-semantic-intent-retrieval` | Альфа Старт: semantic intent retrieval, RuBERT-tiny2, ONNX INT8, FastAPI. | 224 сценария (против исходных 44); реализованный CPU-инференс. Метрики качества и latency не зафиксированы. |
