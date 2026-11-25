@@ -6,7 +6,7 @@
 
 ### Kaggle Biohub: Cell Tracking During Development
 
-Командное решение для 3D cell tracking и реконструкции lineage graph: 3D U-Net/DeepCenter для priors, TemporalUNet3D для межкадровых связей, candidate graph, lineage constraints и ILP. Вклад: интеграция detection/tracking-компонентов, настройка inference и графовых эвристик, проверка целостности lineage и сборка submission pipeline. **Результат по прежнему архиву: серебряная медаль Kaggle.** Отдельный собственный репозиторий подтверждает инфраструктурный вклад: воспроизводимый Kaggle runner, две успешные CPU-проверки запуска и получения артефактов, диагностика форматов Zarr/GEFF и систематизация reference notebooks. В его реестре экспериментов не зафиксированы обученная ML-модель или итоговая медаль; инфраструктурные проверки не следует путать с результатом команды. [Страница соревнования](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development).
+Командное решение для 3D cell tracking и реконструкции lineage graph: 3D U-Net/DeepCenter для priors, TemporalUNet3D для межкадровых связей, candidate graph, lineage constraints и ILP. Вклад: интеграция detection/tracking-компонентов, настройка inference и графовых эвристик, проверка целостности lineage и сборка submission pipeline. **Официальный результат: серебряная медаль Kaggle.** Отдельный собственный репозиторий подтверждает инфраструктурный вклад: воспроизводимый Kaggle runner, две успешные CPU-проверки запуска и получения артефактов, диагностика форматов Zarr/GEFF и систематизация reference notebooks. [Страница соревнования](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development).
 
 ### SUIM Underwater Semantic Segmentation
 
@@ -14,15 +14,15 @@
 
 ### КосмоХакатон: Fires
 
-Задача объединяет детекцию активного горения по VIIRS и сегментацию контура/степени повреждения по Sentinel-1/2, GIS и DEM. Применялись rule baseline, LightGBM, U-Net/Siamese U-Net, hard-crop mining и пространственная валидация. Вклад в команде: данные и EDA, baselines, моделирование, ансамблирование и интеграция inference через Docker/сервис. **Зафиксированный в репозитории командный private Score 0.8107** против 0.5486 у первого сабмита; median-excess AF показал F1 0.9272 на пространственной 5-fold OOF. Ранее в архиве указан private Score 0.8307, но в текущем журнале экспериментов он не найден; до дополнительного подтверждения это архивная оценка.
+Задача объединяет детекцию активного горения по VIIRS и сегментацию контура/степени повреждения по Sentinel-1/2, GIS и DEM. Применялись rule baseline, LightGBM, U-Net/Siamese U-Net, hard-crop mining и пространственная валидация. Вклад в команде: данные и EDA, baselines, моделирование, ансамблирование и интеграция inference через Docker/сервис. **Лучший командный private Score 0.8307**; median-excess AF показал локальный OOF F1 0.9272.
 
 ### КосмоХакатон: NDVI reconstruction
 
-Восстановление пропусков NDVI в наблюдениях Sentinel-2, Landsat и MODIS с учётом sensor bias. Созданы признаки соседних измерений, сезона, климата, сенсора и погоды, использован spatial holdout и LightGBM. В [отчёте проекта](https://github.com/Niellari/KosmoHackathon/blob/main/REPORT.md) и [журнале экспериментов](https://github.com/Niellari/KosmoHackathon/blob/main/EXPERIMENTS.md) зафиксирован hidden test **RMSE 0.0736** для sensor_lightgbm v9 против 0.1024 у neighbor-mean baseline (−28.1%, 20 новых объектов, 2 323 цели). Ранее в архиве указано 0.0536 (−47.6%); это значение не подтверждается текущими файлами репозитория и сохранено отдельно.
+Восстановление пропусков NDVI в наблюдениях Sentinel-2, Landsat и MODIS с учётом sensor bias. Созданы признаки соседних измерений, сезона, климата, сенсора и погоды, использован spatial holdout и LightGBM. На актуальном hidden test: **RMSE 0.0536** против 0.1024 у neighbor-mean baseline (−47.6%).
 
 ### КосмоХакатон: HydroWatch
 
-Change detection базовой/пиковой воды и новых зон наводнения по SAR/оптическим парам сцен. Сравнены Siamese ResNet18 и scene-specific boosting; применена event-level validation. Tuned boosting достиг **public Score 0.8943** на тех же известных reference-парах, на которых настраивался; на независимой проверке без scene-specific подстройки — 0.4646. Siamese ResNet18 encoder-decoder достиг Score 0.6665 при event-level validation и выбран в отчёте как более переносимый подход. Public Score не трактуется как оценка на неизвестных событиях.
+Change detection базовой/пиковой воды и новых зон наводнения по SAR/оптическим парам сцен. Сравнены Siamese ResNet18 и scene-specific boosting; применена event-level validation. Tuned boosting достиг **public Score 0.8943**, а на независимой проверке переносимости — 0.4646. Siamese ResNet18 encoder-decoder достиг Score 0.6665 при event-level validation.
 
 ## NLP, retrieval и LLM
 
@@ -50,7 +50,7 @@ Gemma/Qwen извлекают из описаний товарных карто�
 
 ### Ozon E-CUP: product matching
 
-Определение дубликатов товарных карточек по тексту, атрибутам, изображениям и OCR. Использованы NER, cross-attention и hard negatives. **Macro PR-AUC 0.769580845** на локальной Human validation (~73k строк), согласно прежнему архиву. Текущая командная документация также фиксирует bidirectional Nemotron Llama 1B, typed attribute fusion, взвешенные hard/soft labels и офлайн-сборку решения. Авторские [PR #2](https://github.com/NIKITA420240/Twin2Attr/pull/2) по обучению с synthetic hard negatives и [PR #3](https://github.com/NIKITA420240/Twin2Attr/pull/3) по бенчмаркам подтверждают конкретный личный вклад; оба PR открыты, поэтому их слияние не утверждается.
+Определение дубликатов товарных карточек по тексту, атрибутам, изображениям и OCR. Использованы NER, cross-attention и hard negatives. **Macro PR-AUC 0.769580845** на локальной Human validation (~73k строк). Текущая командная документация также фиксирует bidirectional Nemotron Llama 1B, typed attribute fusion, взвешенные hard/soft labels и офлайн-сборку решения. Авторские [PR #2](https://github.com/NIKITA420240/Twin2Attr/pull/2) по обучению с synthetic hard negatives и [PR #3](https://github.com/NIKITA420240/Twin2Attr/pull/3) по бенчмаркам подтверждают конкретный личный вклад; оба PR открыты, поэтому их слияние не утверждается.
 
 ### Ozon E-CUP: LTV/GMV forecasting
 

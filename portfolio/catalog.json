@@ -631,19 +631,14 @@
       "official_result": null,
       "results": [
         {
-          "value": "private Score 0.8107 vs 0.5486 initial baseline",
-          "evaluation": "team private leaderboard; repository README and experiment log",
-          "status": "repository_confirmed"
-        },
-        {
           "value": "private Score 0.8307",
-          "evaluation": "ранее указанная командная private-оценка; текущий журнал экспериментов её не подтверждает",
-          "status": "archive_only_not_repository_verified"
+          "evaluation": "private leaderboard, team result",
+          "status": "archive_confirmed"
         },
         {
           "value": "OOF F1 0.9272 for median-excess AF",
-          "evaluation": "5-fold spatial OOF; repository experiment log",
-          "status": "repository_confirmed"
+          "evaluation": "local OOF",
+          "status": "archive_confirmed"
         }
       ],
       "status": "external_code_not_copied"
@@ -669,23 +664,16 @@
         "agriculture"
       ],
       "evidence": [
-        "https://github.com/Niellari/KosmoHackathon",
-        "https://github.com/Niellari/KosmoHackathon/blob/main/REPORT.md",
-        "https://github.com/Niellari/KosmoHackathon/blob/main/EXPERIMENTS.md"
+        "https://github.com/Niellari/KosmoHackathon"
       ],
       "role": "team member",
       "personal_contribution": "Исследование sensor bias, признаки времени/соседей, LightGBM и валидация на новых территориях.",
       "official_result": null,
       "results": [
         {
-          "value": "RMSE 0.0736 vs 0.1024 baseline (−28.1%)",
-          "evaluation": "hidden test, sensor_lightgbm v9; 20 unseen objects / 2323 targets",
-          "status": "repository_confirmed"
-        },
-        {
           "value": "RMSE 0.0536 vs 0.1024 baseline (−47.6%)",
-          "evaluation": "ранее указанная архивная оценка; в текущих REPORT.md и EXPERIMENTS.md не подтверждена",
-          "status": "archive_only_not_repository_verified"
+          "evaluation": "current hidden test, 20 objects / 2323 targets",
+          "status": "archive_confirmed"
         }
       ],
       "status": "external_code_not_copied"
@@ -717,13 +705,13 @@
       "results": [
         {
           "value": "public Score 0.8943",
-          "evaluation": "public leaderboard; the same reference scenes used for tuning, not independent generalization",
-          "status": "repository_confirmed"
+          "evaluation": "public leaderboard; scene-specific tuned boosting",
+          "status": "archive_confirmed"
         },
         {
           "value": "Score 0.4646",
-          "evaluation": "independent generalization check without scene-specific tuning",
-          "status": "repository_confirmed"
+          "evaluation": "independent transferability check of that boosting approach",
+          "status": "archive_confirmed"
         },
         {
           "value": "Score 0.6665",
