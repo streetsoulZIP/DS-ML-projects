@@ -360,12 +360,12 @@ def main() -> int:
     sub.add_parser("preflight")
     sub.add_parser("progress")
     snapshot_parser = sub.add_parser("snapshot")
-    snapshot_parser.add_argument("--no-push", action="store_true")
+    snapshot_parser.add_argument("--push", action="store_true")
     submit_parser = sub.add_parser("submit")
     submit_parser.add_argument("--timeout", type=int, default=300)
     submit_parser.add_argument("--poll-interval", type=int, default=5)
     submit_parser.add_argument("--force", action="store_true")
-    submit_parser.add_argument("--no-push", action="store_true")
+    submit_parser.add_argument("--push", action="store_true")
     args = parser.parse_args()
 
     try:
@@ -376,9 +376,9 @@ def main() -> int:
         elif args.command == "progress":
             print(json.dumps(run_client("progress"), ensure_ascii=False, indent=2))
         elif args.command == "snapshot":
-            snapshot(not args.no_push)
+            snapshot(args.push)
         else:
-            submit(args.timeout, args.poll_interval, args.force, not args.no_push)
+            submit(args.timeout, args.poll_interval, args.force, args.push)
     except (ContestError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
